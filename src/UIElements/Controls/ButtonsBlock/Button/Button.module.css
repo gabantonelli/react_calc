@@ -1,0 +1,17 @@
+.calc__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.calc__button:hover {
+    filter: brightness(.90);
+}
+
+.calc__button.span2 {
+    grid-column: span 2;
+}
