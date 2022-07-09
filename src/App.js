@@ -61,7 +61,11 @@ const App = () => {
             return accumulator + parseFloat(item);
         }
       } else {
-        operator = item.charAt(item.length-1);
+        if (item.length>0 && item.charAt(item.length-1) === "-" ) {
+          operator = item.charAt(item.length-2);
+        } else {
+          operator = item.charAt(item.length-1);
+        }
         return accumulator;
       }
     },0);
