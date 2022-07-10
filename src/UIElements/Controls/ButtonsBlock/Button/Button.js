@@ -10,7 +10,7 @@ const Button = (props) => {
   classes.push(styles.spanv2);
  }
   return (
-    <button className={classes.join(' ')} onClick={props.click}>{ props.children }</button>
+    <button id={props.id} className={classes.join(' ')} onClick={props.click}>{ props.children }</button>
   )
 }
 
