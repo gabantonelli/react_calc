@@ -10,7 +10,7 @@ const ButtonsBlock = (props) => {
         <Button id="divide" click={()=>props.addInput("/")}>/</Button>
         <Button id="multiply" click={()=>props.addInput("*")}>*</Button>
         <Button id="seven" click={()=>props.addInput("7")}>7</Button>
-        <Button id="eigth" click={()=>props.addInput("8")}>8</Button>
+        <Button id="eight" click={()=>props.addInput("8")}>8</Button>
         <Button id="nine" click={()=>props.addInput("9")}>9</Button>
         <Button id="subtract" click={()=>props.addInput("-")}>-</Button>
         <Button id="four" click={()=>props.addInput("4")}>4</Button>
