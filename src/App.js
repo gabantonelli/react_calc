@@ -14,7 +14,7 @@ const App = () => {
       // check if we can attach to last entry
         if ((/[\d\.]$/).test(lastEntry) && (/[\d\.]$/).test(newInput)){
           // if there is only a 0 and we add a digit remove 0
-          if (lastEntry==='0' && (/^[1-9]$/).test(newInput)) {
+          if (lastEntry==='0' && (/^[0-9]$/).test(newInput)) {
             return [newInput];
           }
           //if there is already a . we can't add another one
