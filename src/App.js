@@ -11,7 +11,7 @@ const App = () => {
     
     setInputs(prevState =>{
       const lastEntry = prevState[prevState.length-1];
-      // check if we can attach to last entry
+      // check if we can attach number to last entry
         if ((/[\d\.]$/).test(lastEntry) && (/[\d\.]$/).test(newInput)){
           // if there is only a 0 and we add a digit remove 0
           if (lastEntry==='0' && (/^[0-9]$/).test(newInput)) {
@@ -26,7 +26,7 @@ const App = () => {
             return newArr;
         }
       // check if we can attach another operator to an operator
-      if ((/[+-/*]/).test(lastEntry) && (/^[+-/*]$/).test(newInput)){
+      if ((/[+-/*]$/).test(lastEntry) && (/^[+-/*]$/).test(newInput)){
         const newArr = [...prevState];
         newArr[newArr.length-1] = lastEntry + newInput;
         return newArr;
@@ -61,12 +61,13 @@ const App = () => {
             return accumulator + parseFloat(item);
         }
       } else {
-        if (item.length>0 && item.charAt(item.length-1) === "-" ) {
+        if (item.length>1 && item.charAt(item.length-1) === "-" ) {
           operator = item.charAt(item.length-2);
+          return accumulator *-1;
         } else {
           operator = item.charAt(item.length-1);
+          return accumulator;
         }
-        return accumulator;
       }
     },0);
     setInputs([result]);
